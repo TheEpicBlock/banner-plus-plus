@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "bpp-test",
+  "version": "${version}",
+
+  "name": "Banner++ test mod",
+  "description": "",
+  "authors": [
+    "kvverti"
+  ],
+  "contact": {
+    "homepage": "https://github.com/kvverti/banner-plus-plus",
+    "sources": "https://github.com/kvverti/banner-plus-plus",
+    "issues": "https://github.com/kvverti/banner-plus-plus/issues"
+  },
+
+  "license": "MIT",
+  "icon": "",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.fablabsmc.fablabs.test.bannerpattern.Testmod"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+  },
+  "suggests": {
+  }
+}

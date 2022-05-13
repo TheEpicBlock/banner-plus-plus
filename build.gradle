@@ -39,6 +39,31 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 }
 
+sourceSets {
+	testmod {
+		runtimeClasspath += main.runtimeClasspath + main.output
+		compileClasspath += main.compileClasspath + main.output
+	}
+}
+
+loom {
+	runs {
+		testmodClient {
+			client()
+			ideConfigGenerated project.rootProject == project
+			name = "Test Mod Client"
+			source sourceSets.testmod
+		}
+		testmodServer {
+			server()
+			ideConfigGenerated project.rootProject == project
+			name = "Test Mod Server"
+			source sourceSets.testmod
+		}
+	}
+}
+
+
 checkstyle {
 	configFile = rootProject.file("checkstyle.xml")
 	toolVersion = '8.43'
