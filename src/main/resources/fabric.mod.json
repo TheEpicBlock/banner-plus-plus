@@ -37,6 +37,5 @@
     "fabric": "*"
   },
   "suggests": {
-    "flamingo": "*"
   }
 }
